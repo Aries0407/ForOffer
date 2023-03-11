@@ -11,5 +11,6 @@ public interface InterfaceConstant {
         3、因为final修饰的原因，所以修饰之后内容不可变
      */
     int INTERFACE_FIRST = 1;
+    ClassConstant CL = new ClassConstant();
 
 }
