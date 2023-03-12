@@ -1,4 +1,4 @@
-package LeetCode.Thread;
+package JavaSE.MyThread.Thread;
 
 import java.util.function.IntConsumer;
 

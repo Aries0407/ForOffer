@@ -1,41 +1,36 @@
-package LeetCode.Thread;
-
-import java.util.concurrent.atomic.AtomicInteger;
+package JavaSE.MyThread.Thread;
 
 /**
  * @author Aries
- * @date 2021/4/26 9:35
+ * @date 2023/3/11 17:33
  */
-public class LC1114 {
+public class LC1114_2 {
 
-    private AtomicInteger first = new AtomicInteger(0);
-    private AtomicInteger second = new AtomicInteger(0);
 
+    public LC1114_2() {
+
+    }
 
     public void first(Runnable printFirst) throws InterruptedException {
 
         // printFirst.run() outputs "first". Do not change or remove this line.
         printFirst.run();
-        first.incrementAndGet();
     }
 
     public void second(Runnable printSecond) throws InterruptedException {
-        while (first.get() != 1) {
 
-        }
         // printSecond.run() outputs "second". Do not change or remove this line.
         printSecond.run();
-        second.incrementAndGet();
-
     }
 
     public void third(Runnable printThird) throws InterruptedException {
-        while (second.get() != 1) {
-        }
-
 
         // printThird.run() outputs "third". Do not change or remove this line.
         printThird.run();
+    }
+
+    public static void main(String[] args) {
 
     }
+
 }

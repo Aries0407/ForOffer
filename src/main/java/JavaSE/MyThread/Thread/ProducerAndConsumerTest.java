@@ -1,4 +1,4 @@
-package LeetCode.Thread;
+package JavaSE.MyThread.Thread;
 
 /**
  * @author Aries

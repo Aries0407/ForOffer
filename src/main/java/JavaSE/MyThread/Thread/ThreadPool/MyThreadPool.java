@@ -1,4 +1,4 @@
-package JavaSE.MyThread;
+package JavaSE.MyThread.Thread.ThreadPool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

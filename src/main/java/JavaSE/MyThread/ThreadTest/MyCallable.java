@@ -6,7 +6,7 @@ import java.util.concurrent.Callable;
  * @author Aries
  * @date 2023/3/11 9:54
  */
-public class MyCallable implements Callable {
+public class MyCallable implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
