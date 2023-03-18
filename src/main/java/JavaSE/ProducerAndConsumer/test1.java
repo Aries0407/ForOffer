@@ -1,6 +1,5 @@
 package JavaSE.ProducerAndConsumer;
 
-import javax.management.remote.rmi._RMIConnection_Stub;
 
 /**
  * @author Aries

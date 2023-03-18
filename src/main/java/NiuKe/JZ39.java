@@ -1,6 +1,5 @@
 package NiuKe;
 
-import sun.nio.cs.ext.ISCII91;
 
 public class JZ39 {
     /*

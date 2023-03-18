@@ -1,6 +1,5 @@
 package JavaSE.Stream;
 
-import com.sun.org.apache.bcel.internal.generic.LSTORE;
 
 import java.util.*;
 import java.util.stream.Collectors;

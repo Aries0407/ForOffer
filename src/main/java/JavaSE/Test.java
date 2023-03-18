@@ -2,6 +2,7 @@ package JavaSE;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -36,6 +37,7 @@ public class Test {
         ConcurrentHashMap<Integer,Integer> ee = new ConcurrentHashMap<>();
         ee.put(1,1);
 
+        List<String> L = List.of("1");
 
     }
 }

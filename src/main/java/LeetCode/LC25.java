@@ -1,7 +1,6 @@
 package LeetCode;
 
 import LeetCode.List.LC2;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
