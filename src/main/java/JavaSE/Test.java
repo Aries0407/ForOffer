@@ -37,7 +37,9 @@ public class Test {
         ConcurrentHashMap<Integer,Integer> ee = new ConcurrentHashMap<>();
         ee.put(1,1);
 
-        List<String> L = List.of("1");
+//        List<String> L = List.of("1");
+
+
 
     }
 }

@@ -9,5 +9,13 @@ public class Test {
         Student<String> stringStudent = new Student<>();
         stringStudent.set("zz");
         System.out.println(stringStudent.getT());
+
+        stringStudent.setNumber("1");
+        stringStudent.setNumber(1);
+
+        GenericInterface<String> genericInterface = new GenericImpl<>();
+        genericInterface.getT();
+
+
     }
 }
