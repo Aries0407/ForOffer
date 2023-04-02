@@ -7,8 +7,8 @@ import java.util.concurrent.CountDownLatch;
  * @date 2023/3/26 11:32
  */
 public class LC1117 {
-    private CountDownLatch oxygen = new CountDownLatch(2);
     private CountDownLatch hydrogen = new CountDownLatch(0);
+    private CountDownLatch oxygen = new CountDownLatch(2);
     public static void main(String[] args) {
         ThreadH h = new ThreadH();
         ThreadO o = new ThreadO();
@@ -17,12 +17,11 @@ public class LC1117 {
     }
 
     public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {
+        hydrogen.await();
         // releaseHydrogen.run() outputs "H". Do not change or remove this line.
         for (int i = 0; i < 2; i++) {
-            hydrogen.await();
-
             releaseHydrogen.run();
-            if (i == 1) {
+            if (i ==1){
                 hydrogen = new CountDownLatch(1);
             }
             oxygen.countDown();
@@ -39,15 +38,16 @@ public class LC1117 {
 }
 
 class ThreadH extends Thread{
+
     @Override
     public void run() {
-        System.out.println("H");
+        System.out.print("H");
     }
 }
 
 class ThreadO extends Thread{
     @Override
     public void run() {
-        System.out.println("O");
+        System.out.print("O");
     }
 }

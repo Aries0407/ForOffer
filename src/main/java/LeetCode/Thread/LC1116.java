@@ -34,7 +34,7 @@ public class LC1116 {
 
     public void even(IntConsumer printNumber) throws InterruptedException {
         for (int i1 = 1; i1 <= n; i1++) {
-            if ((i1 & 1) == 1) {
+            if ((i1 & 1) == 0) {
                 even.await();
                 printNumber.accept(i1);
                 even = new CountDownLatch(1);
@@ -45,7 +45,7 @@ public class LC1116 {
 
     public void odd(IntConsumer printNumber) throws InterruptedException {
         for (int j = 1; j <= n; j++) {
-            if ((j & 1) == 0) {
+            if ((j & 1) == 1) {
                 odd.await();
                 printNumber.accept(j);
                 odd = new CountDownLatch(1);

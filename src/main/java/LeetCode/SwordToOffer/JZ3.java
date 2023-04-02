@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class JZ3 {
 
 
-    //方法一：通过桶计数(效率最好)
+    //方法一：通过桶计数
     public int findRepeatNumber(int[] nums) {
         int count[] = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
@@ -18,7 +18,7 @@ public class JZ3 {
         return 0;
     }
 
-    //方法二：原地置换
+    //方法二：原地置换(效率最好)
     public int findRepeatNumber2(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != i) {
