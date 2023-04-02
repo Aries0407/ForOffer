@@ -15,7 +15,7 @@ public class LC1117 {
         // releaseHydrogen.run() outputs "H". Do not change or remove this line.
         for (int i = 0; i < 2; i++) {
             releaseHydrogen.run();
-            if (i ==1){
+            if (i == 1) {
                 hydrogen = new CountDownLatch(1);
             }
             oxygen.countDown();
