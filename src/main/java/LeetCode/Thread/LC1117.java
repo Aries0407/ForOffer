@@ -9,12 +9,6 @@ import java.util.concurrent.CountDownLatch;
 public class LC1117 {
     private CountDownLatch hydrogen = new CountDownLatch(0);
     private CountDownLatch oxygen = new CountDownLatch(2);
-    public static void main(String[] args) {
-        ThreadH h = new ThreadH();
-        ThreadO o = new ThreadO();
-        h.start();
-        o.start();
-    }
 
     public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {
         hydrogen.await();
@@ -34,20 +28,5 @@ public class LC1117 {
         releaseOxygen.run();
         oxygen = new CountDownLatch(2);
         hydrogen.countDown();
-    }
-}
-
-class ThreadH extends Thread{
-
-    @Override
-    public void run() {
-        System.out.print("H");
-    }
-}
-
-class ThreadO extends Thread{
-    @Override
-    public void run() {
-        System.out.print("O");
     }
 }
