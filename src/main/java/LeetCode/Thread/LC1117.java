@@ -13,13 +13,11 @@ public class LC1117 {
     public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {
         hydrogen.await();
         // releaseHydrogen.run() outputs "H". Do not change or remove this line.
-        for (int i = 0; i < 2; i++) {
-            releaseHydrogen.run();
-            if (i == 1) {
-                hydrogen = new CountDownLatch(1);
-            }
-            oxygen.countDown();
+        releaseHydrogen.run();
+        if (oxygen.getCount() == 1) {
+            hydrogen = new CountDownLatch(1);
         }
+        oxygen.countDown();
     }
 
     public void oxygen(Runnable releaseOxygen) throws InterruptedException {

@@ -1,7 +1,5 @@
 package LeetCode.SlidingWindow;
 
-import LeetCode.LC3;
-
 /**
  * @author Aries
  * @date 2021/2/27 9:14
